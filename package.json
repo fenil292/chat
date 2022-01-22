@@ -4,6 +4,9 @@
   "engines": {
     "node": "14.x"
   },
+  "scripts": {
+    "start": "node index.js"
+},
   "dependencies": {
     "ejs": "^3.1.5",
     "express": "^4.17.1"
