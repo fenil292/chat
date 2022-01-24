@@ -95,7 +95,7 @@ body {
     <button id="send" style="position: absolute;">Send</button><input type="number"  id="id" value="<?php echo @id; ?>" style="display:none;" disabled>
 </div>
 
-
+<script src="/socket.io/socket.io.js"></script>
     <script src="../nodec.js"></script>
 </body>
 </html>
