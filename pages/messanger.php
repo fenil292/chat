@@ -1,10 +1,10 @@
 <?php
-session_start();
+/*session_start();
 $id=$_SESSION['login_id'];
 $cn=mysqli_connect('localhost','id18322145_vat_cheet_user','-n^v>AnhLsF1+G=R','id18322145_vat_cheet');
 //if(empty($_SESSION['login_id'])) header('location:index.php');
 $res=mysqli_query($cn,"select * from `login` where `user_id`=".$id);
-$data=mysqli_fetch_assoc($res);
+$data=mysqli_fetch_assoc($res);*/
 ?>
 <!DOCTYPE html>
 <html>
@@ -69,31 +69,6 @@ body {
   color: #999;
 }
 </style>
-    <script>
-    /*$(document).ready(function(){  
-        var rt,cnt;
-        setInterval(function(){   
-            //$('#rec').load("total.php");
-            rt=document.getElementById('rec').value;
-            $.ajax({
-                type:"POST",
-                url:"total.php",
-                success:function(res){
-                    //alert(JSON.stringify(res+"h"));
-                    cnt=res;
-                }
-                //processData: false,
-                //contentType: false
-            });
-            if(rt==0 || cnt>rt)
-            {
-                //alert(cnt + rt);
-                $("#chat").load("msg.php").fadeIn('slow').append();
-            }
-            //alert(r);
-        }, 2000);
-    });*/
-    </script>
 </head>
 <body>
 <div style="text-align:center;position: inherit;top: 0;left: 0;z-index: 999;width: 100%;height: auto;background:white;">
@@ -103,56 +78,24 @@ body {
 </div>
 <div style="width: 100%; height: 580px; overflow-y: scroll;" id="chat"> 
   <?php
-      $msg_res=mysqli_query($cn,"select * from `chat`");
+      /*$msg_res=mysqli_query($cn,"select * from `chat`");
       while($m_data=mysqli_fetch_assoc($msg_res)) {
         if($m_data['user_id']!=$id)
         {
             $name_res=mysqli_query($cn,"select `name` from `login` where `user_id`=".$m_data['user_id']);
-            $name=mysqli_fetch_assoc($name_res);
+            $name=mysqli_fetch_assoc($name_res);*/
   ?>
         <div class='container' style='width:50%;float:left;'><p><?php echo $m_data['msg']; ?></p><span class='time-right'><?php echo $m_data['time']; ?></span><div style='color:red;' class='time-right'><?php echo $name['name']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></div>
-    <?php } else { ?>
+    <?php// } else { ?>
         <div class='container darker' style='float:right;width:50%;'><p><?php echo $m_data['msg']; ?></p><span class='time-left'><?php echo $m_data['time']; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><div style='color:blue;' class='time-left'><?php echo $data['name']; ?></div></div>
-<?php } } ?>
+<?php //} } ?>
 </div>
 <div style="width: 100%;">
     <input type="text" id="msgbox" style="width: 90%;" placeholder="Type a message" autofocus="autofocus">
     <button id="send" style="position: absolute;">Send</button><input type="number"  id="id" value="<?php echo @id; ?>" style="display:none;" disabled>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function(){
-      $('#chat').scrollTop($('#chat')[0].scrollHeight);
-        /*$('#send').click(function(){
-            var m = document.getElementById('msgbox').value;
-            m=m.trim();
-            if(m!="")
-            {
-            $.ajax({
-                type:"POST",
-                //dataType: 'JSON',
-                dataType:'text',
-                url:"insert_msg.php",
-                data: { message: m },
-                success:function(res){
-                    //alert(JSON.stringify(res));
-                    //fetch_msg();
-                    $('#msgbox').focus();
-                    document.getElementById('msgbox').value = "";
-                }
-                //processData: false,
-                //contentType: false
-            });
-            }
-            else
-            {
-                document.getElementById('msgbox').value = "";
-                alert('Please Type a Message.');
-            }
-        });*/
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
     <script src="../nodec.js"></script>
 </body>
 </html>
