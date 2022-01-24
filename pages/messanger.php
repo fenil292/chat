@@ -95,7 +95,7 @@ body {
     <button id="send" style="position: absolute;">Send</button><input type="number"  id="id" value="<?php echo @id; ?>" style="display:none;" disabled>
 </div>
 
-<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.js" integrity="sha512-MgkNs0gNdrnOM7k+0L+wgiRc5aLgl74sJQKbIWegVIMvVGPc1+gc1L2oK9Wf/D9pq58eqIJAxOonYPVE5UwUFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!--<script src="../nodec.js"></script>-->
 	<script>
 	var socket = io();
