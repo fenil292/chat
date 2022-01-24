@@ -1,3 +1,6 @@
+<?php
+	header("location:messanger.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
