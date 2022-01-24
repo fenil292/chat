@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
   res.send('<h1>Hello world</h1>');
 });
 /*app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/pages/index.php');
+  res.sendFile(__dirname + '/pages/index.html');
 });*/
 console.log('listening on *:3000');
 server.listen(port, () => {
