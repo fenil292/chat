@@ -2,7 +2,7 @@
 /*session_start();
 $id=$_SESSION['login_id'];
 $cn=mysqli_connect('localhost','id18322145_vat_cheet_user','-n^v>AnhLsF1+G=R','id18322145_vat_cheet');
-//if(empty($_SESSION['login_id'])) header('location:index.php');
+if(empty($_SESSION['login_id'])) header('location:index.php');
 $res=mysqli_query($cn,"select * from `login` where `user_id`=".$id);
 $data=mysqli_fetch_assoc($res);*/
 ?>
