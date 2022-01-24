@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
   res.send('<h1>Hello world</h1>');
 });*/
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/pages/index.html');
+  res.sendFile(__dirname + '/pages/index.php');
 });
 
 server.listen(port, () => {
