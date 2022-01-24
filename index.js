@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 /*app.get('/', (req, res) => {
   res.sendFile(__dirname + '/pages/index.php');
 });*/
-
+console.log('listening on *:3000');
 server.listen(port, () => {
   console.log('listening on *:3000');
 });
