@@ -153,6 +153,6 @@ body {
     });
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-    <script src="js/nodec.js"></script>
+    <script src="../nodec.js"></script>
 </body>
 </html>
