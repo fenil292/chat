@@ -100,6 +100,7 @@ body {
 	<script>
 	var socket = io();
 $( "#send" ).click( function() {
+	alert('jhbj');
 	var m = $( "#msgbox" ).val();
 	var name= document.getElementById('name');
 	var t,user_id;
