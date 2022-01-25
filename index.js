@@ -6,7 +6,7 @@ const port = process.env.PORT || 3000;
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/pages/messanger.html');
 });
-
+console.log("hello");
 io.on('connection', (socket) => {
   socket.on('message', data => {
     io.emit('message', { name: data.name, message: data.message,time: data.time });
