@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   //res.sendFile(__dirname + '/pages/index.html');
-	res.redirect('/pages/messanger.php');
+	res.redirect('/pages');
 });
 /*app.get('/', (req, res) => {
   res.send('<h1>Hello world</h1>');
